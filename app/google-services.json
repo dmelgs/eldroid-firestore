@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "566105745038",
+    "project_id": "eldroidact-drilon",
+    "storage_bucket": "eldroidact-drilon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566105745038:android:5cc980d02503a9a9ae0bdf",
+        "android_client_info": {
+          "package_name": "com.example.pasabiliprac1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "566105745038-kiofejjr59dfa7gd95mpd94ug6j4p7t4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASUTtN5uH08950vwC9kcSmzEP1YtGM1v4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "566105745038-kiofejjr59dfa7gd95mpd94ug6j4p7t4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566105745038:android:b5c74a4fcb67a774ae0bdf",
+        "android_client_info": {
+          "package_name": "com.example.registrationpage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "566105745038-kiofejjr59dfa7gd95mpd94ug6j4p7t4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASUTtN5uH08950vwC9kcSmzEP1YtGM1v4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "566105745038-kiofejjr59dfa7gd95mpd94ug6j4p7t4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
