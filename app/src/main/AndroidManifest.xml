@@ -46,6 +46,15 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <meta-data
+            android:name="com.google.firebase.auth.API_KEY"
+            android:value="AIzaSyCaw2HmsGNJ7ul9pgB224tk4Fyg7oOQkKc" />
+        <meta-data
+            android:name="com.google.firebase.auth.GOOGLE_APP_ID"
+            android:value="1:592976406242:android:ece91a795d0039197820bb" />
+        <meta-data
+            android:name="com.google.firebase.auth.DEFAULT_WEB_CLIENT_ID"
+            android:value="eprel-d3fdc.web.app" />
     </application>
 
 </manifest>

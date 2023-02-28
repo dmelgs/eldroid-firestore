@@ -10,30 +10,36 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class login extends AppCompatActivity {
     EditText uname, pass;
-    Button  login;
+    Button login, goRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
+        ref();
 
-
-        Button createBtn = findViewById(R.id.createBtn);
-        createBtn.setOnClickListener(new View.OnClickListener() {
+        goRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(login.this, RegistrationPage.class));
+               goToRegisterPage();
             }
         });
-
-        Button logInbutton = findViewById(R.id.logInbutton);
-        logInbutton.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(login.this, welcomepage.class));
-                
-
+               goToWelcomePage();
             }
         });
     }
+    public void ref(){
+        login = findViewById(R.id.logInbutton);
+        goRegister = findViewById(R.id.createBtn);
+    }
+    public void goToRegisterPage(){
+        startActivity(new Intent(login.this, RegistrationPage.class));
+    }
+    public void goToWelcomePage(){
+        startActivity(new Intent(login.this, welcomepage.class));
+    }
+
 }

@@ -35,6 +35,8 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     final String TAG = "FIR ESTORE";
+    FirebaseAuth mAuth = FirebaseAuth.getInstance();
+
     FirebaseFirestore firestore;
     EditText passwordActionsEditText;
 
