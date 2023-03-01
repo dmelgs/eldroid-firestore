@@ -10,22 +10,23 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 import Utils.FireBaseUtils;
 import Utils.ReusableMethods;
 
 public class LoginPage extends AppCompatActivity {
+   Context context;
     EditText email, pass;
     Button login, goRegister;
-    FireBaseUtils fireBaseUtils = new FireBaseUtils();
+    FireBaseUtils fireBaseUtils;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
         ref();
-
+        context = this;
+        fireBaseUtils = new FireBaseUtils(context);
         goRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,8 +50,6 @@ public class LoginPage extends AppCompatActivity {
     public void goToWelcomePage(){
         try {
             fireBaseUtils.loginUser(email.getText().toString(), pass.getText().toString());
-            startActivity(new Intent(LoginPage.this, MainActivity.class)
-            );
         }catch (Exception e){
             e.printStackTrace();
         }
