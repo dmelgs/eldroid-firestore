@@ -69,7 +69,6 @@ public class SignUpPage extends AppCompatActivity {
                         user.getLastname(),
                         user.getAddress());
 
-                ReusableMethods.showMessage(this,"Account Created Successfully");
             }catch (Exception e){
                 e.printStackTrace();
             }
