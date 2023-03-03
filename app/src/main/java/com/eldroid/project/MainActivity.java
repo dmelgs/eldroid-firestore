@@ -29,15 +29,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         String userId = mAuth.getCurrentUser().getUid();
+
         firebase = new FireBaseUtils(this);
         firebase.setupFirebase();
+
         TextView usertext = findViewById(R.id.usernametextview);
         logout = findViewById(R.id.logout_btn);
 
-        firebase.getUserData(userId, new OnCompleteListener<DocumentSnapshot>() {
+        firebase.getUserData(userId, new OnCompleteListener<DocumentSnapshot>() { //this method is for retrieving/reading data from firestore
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if (task.isSuccessful()) {
@@ -45,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
                     if (document.exists()) {
                         String uname = document.getString("username");
                         usertext.setText("Hi! "+uname);
-                        //ReusableMethods.showMessage(MainActivity.this, uname);
                     } else {
                         ReusableMethods.showMessage(MainActivity.this, "User not found");
                     }

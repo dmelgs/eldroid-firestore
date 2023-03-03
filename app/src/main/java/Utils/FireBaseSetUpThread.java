@@ -15,14 +15,15 @@ public class FireBaseSetUpThread extends AsyncTask<Void, Void, Void> {
     private final FireBaseUtils firebase;
     private final Context context;
 
-    public FireBaseSetUpThread(Context context, FireBaseUtils firebase) {
+    public FireBaseSetUpThread(Context context, FireBaseUtils firebase) { //constructor to initialize context and firebase
+
         this.context = context;
         this.firebase = firebase;
 
     }
 
     @Override
-    protected Void doInBackground(Void... voids) {
+    protected Void doInBackground(Void... voids) { //ang gamit ani is while ga run ang application nag run pod ni siya
         // Set up Firebase Auth
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
@@ -41,7 +42,7 @@ public class FireBaseSetUpThread extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected void onPostExecute(Void aVoid) {
-        // Notify the UI thread that Firebase Auth has been set up
+        // Notify that Firebase Auth has been set up
         firebase.onFirebaseSetupComplete();
     }
 }
