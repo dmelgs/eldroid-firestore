@@ -17,9 +17,9 @@ public class ReusableMethods {
     }
 
     public static boolean isEmpty(String component) {
-        if(component != null){
+        if (component != null) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
